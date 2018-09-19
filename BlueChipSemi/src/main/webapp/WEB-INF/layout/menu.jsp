@@ -19,5 +19,11 @@
 		&nbsp;&nbsp;&nbsp;
 		<a href="${root}/shop/list.do">Hugeso_Hugeso</a>
 		<hr><br>
+		<hr><br>
+		<hr><br>
+		<hr><br>
+		<hr><br>
+		<hr><br>
+		<hr><br>
 	</body>
 </html>
