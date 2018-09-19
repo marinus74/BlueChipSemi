@@ -13,7 +13,7 @@
 	</head> 
 	<body>
 		<hr>
-		<a href="${root}/main.do">Home</a>
+		<a href="${root}/main.do">Home_Home</a>
 		&nbsp;&nbsp;&nbsp;
 		<a href="${root}/shop/thro.do">사이트 소개</a>
 		&nbsp;&nbsp;&nbsp;
