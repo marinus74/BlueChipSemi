@@ -18,6 +18,10 @@
 		<a href="${root}/shop/thro.do">사이트 소개</a>
 		&nbsp;&nbsp;&nbsp;
 		<a href="${root}/shop/list.do">휴게소 목록</a>
+		<hr><br>
+		<hr><br>
+		<hr><br>
 		<hr>
+		
 	</body>
 </html>
