@@ -13,11 +13,11 @@
 	</head> 
 	<body>
 		<hr>
-		<a href="${root}/main.do">Home_Home</a>
+		<a href="${root}/main.do">Home</a>
 		&nbsp;&nbsp;&nbsp;
-		<a href="${root}/shop/thro.do">Site_Site</a>
+		<a href="${root}/shop/thro.do">Site</a>
 		&nbsp;&nbsp;&nbsp;
-		<a href="${root}/shop/list.do">Hugeso_Hugeso</a>
+		<a href="${root}/shop/list.do">Hugeso</a>
 		<hr>
 		
 	</body>
