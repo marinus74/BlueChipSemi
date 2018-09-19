@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="shop">
+	<select id="ShopTotalCount" resultType="int">
+		select count(*) from huge
+	</select>
+	<insert id ="ShopInsert" parameterType="cdto">
+		insert into commen values (commen_seq.nextval,#{commentirum},#{commentcontent},#{pyeong})
+	</insert>
+		
+	<select id="ShopAllDatas" parameterType="hashmap" resultType="sdto">
+		<![CDATA[  
+			select a.* from	(select ROWNUM as RNUM,b.* 
+							 from(select * from huge 
+							 	  order by hugenum asc
+							 	  )b
+							 )a 
+			where a.RNUM>=#{start} and a.RNUM<=#{end}
+		]]>
+	</select>
+	
+	<select id ="ShopAllDatas2" parameterType="String" resultType="mdto">
+		select * from menu where hugeirum = #{hugeirum}
+	</select>
+	
+	<select id ="ShopAllDatas3" parameterType="String" resultType="cdto">
+		select * from commen where commentirum = #{commentirum}
+	</select>
+	
+	<select id ="ShopAllDatas4" parameterType="String" resultType="sdto">
+		select * from huge where irum = #{irum}
+	</select>
+	
+	<delete id="delete" parameterType="int">
+		delete from commen where commentnum = #{commentnum}
+	</delete>
+	
+	
+	
+</mapper>

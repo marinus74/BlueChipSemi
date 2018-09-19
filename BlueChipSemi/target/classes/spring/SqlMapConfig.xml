@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "HTTP://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<typeAlias type="test.shop.ShopDto" alias="sdto"/>
+		<typeAlias type="test.bbsdto.BBSDto" alias="article"/> 
+		<typeAlias type="test.shop.MenuDto" alias="mdto"/>
+		<typeAlias type="test.shop.CommentDto" alias="cdto"/>
+		<typeAlias type="test.gongji.GongjiDto" alias="gdto"/>
+		<!-- <typeAlias type="test.bbsdto.BBSDto" alias="bdto"/> -->
+	</typeAliases>
+	
+	<mappers>
+		<mapper resource="test/shop/ShopSql.xml" />
+		<mapper resource="test/gongji/GongjiSql.xml" />
+		<mapper resource="spring/bbs/login.xml" />
+		<mapper resource="spring/bbs/bbs.xml" />
+		
+	</mappers>
+</configuration>

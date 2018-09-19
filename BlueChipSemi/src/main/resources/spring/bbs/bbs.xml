@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.bbsdao.BBSDao"><!-- namespace는 mapper의 속성  -->
+	<insert id="write" parameterType="article">
+			INSERT INTO NOTICE (articleNum,id, title, content, writedate) values (NOTICE_SEQ.nextval ,#{id},#{title},#{content},sysdate)
+	</insert>
+
+	<update id="write2" parameterType="article">
+			update notice 
+			set  title = #{title}, content = #{content} where articlenum = #{articleNum}
+	</update>
+	
+
+	<select id="getTotalCount" resultType="int">
+		SELECT COUNT(*) FROM NOTICE
+	</select>
+	
+	<select id="list" parameterType="HashMap" resultType="article">
+		SELECT * FROM (SELECT ROWNUM RM,LIST.* FROM(SELECT ARTICLENUM,ID,TITLE,CONTENT,WRITEDATE
+		FROM NOTICE START WITH groupId=0 CONNECT BY PRIOR articleNum=groupId 
+		<!-- groupId가 0번인걸 찾아 우선순위 ,slblings는 형제  같은건 내림차순으로정렬, 최신답글이 위로간다-->
+	</select>
+	
+	<select id="login" parameterType="String" resultType="String">
+		SELECT PASS FROM LOGIN WHERE ID=#{id}
+	</select>
+	
+	<!-- <select id="content" parameterType="String" resultType="article">
+	SELECT * FROM NOTICE WHERE ARTICLENUM=#{articleNum}
+	</select>
+	
+	<delete id="delete" parameterType="String">
+		DELETE FROM NOTICE WHERE ARTICLENUM  IN (SELECT ARTICLENUM FROM NOTICE START WITH ARTICLENUM=#{articleNum} CONNECT BY PRIOR articleNum=groupId)
+	</delete>
+
+	<select id="updateForm" parameterType="String" resultType="article">
+	SELECT TITLE,CONTENT FROM NOTICE WHERE ARTICLENUM=#{articleNum}
+	</select>
+	
+	<update id="update" parameterType="article">
+	UPDATE NOTICE SET TITLE=#{title}, CONTENT=#{content} WHERE ARTICLENUM=#{articleNum}
+	</update>
+	 -->
+	 	
+</mapper>
+
+
