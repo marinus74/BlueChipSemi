@@ -18,18 +18,7 @@
 		<a href="${root}/shop/thro.do">Site_Site</a>
 		&nbsp;&nbsp;&nbsp;
 		<a href="${root}/shop/list.do">Hugeso_Hugeso</a>
-		<hr><br>
-		<hr><br>
-		<hr><br>
-		<hr><br>
-		<hr><br>
-		<hr><br>
-		<hr><br>
-		<hr><br>
-		<hr><br>
-		<hr><br>
-		<hr><br>
-		<hr><br>
-		<hr><br>
+		<hr>
+		
 	</body>
 </html>
