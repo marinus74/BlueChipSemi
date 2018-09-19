@@ -13,7 +13,7 @@
 	</head> 
 	<body>
 		<hr>
-		<a href="${root}/main.do">Home</a>
+		<a href="${root}/main.do">Home222</a>
 		&nbsp;&nbsp;&nbsp;
 		<a href="${root}/shop/thro.do">Site</a>
 		&nbsp;&nbsp;&nbsp;
